@@ -1,0 +1,8 @@
+{
+  "android": "9",
+  "build": "PPR2.180905.006.A1 release-keys",
+  "model": "UnionTV",
+  "software_version": "V8-R41KT01-LF1V343",
+  "software_version_property": "ro.software.version_id",
+  "stock_launcher_package": "com.google.android.tvlauncher"
+}

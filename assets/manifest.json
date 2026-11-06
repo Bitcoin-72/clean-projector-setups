@@ -1,0 +1,50 @@
+{
+  "assets/screenshots/projector-cinematic.png": {
+    "bytes": 414334,
+    "sha256": "1420776347455e767592e7ba26a798d74e673a119dcfe43fc70f80299be22a08"
+  },
+  "assets/screenshots/projector-photos.png": {
+    "bytes": 1863441,
+    "sha256": "2b75aad0f6805bf8b3ce4eb09ef5c95fcf014397e288e5a266c414eabc24aac4"
+  },
+  "assets/screenshots/projector-sunrise.png": {
+    "bytes": 321716,
+    "sha256": "cd11b8813b0988f7491e61bda5b518b44af6c9990508fba42ff20d71461fcbe8"
+  },
+  "assets/screenshots/tcl-cinematic.png": {
+    "bytes": 418319,
+    "sha256": "1147c9f480568ab7c8b3e0505d42296e93c256d16fd1256775c112a0268ef158"
+  },
+  "screensaver/pictures/001-lake-mystery.jpg": {
+    "bytes": 304916,
+    "sha256": "6ef3c322553aefa8451fcabe008565d7e9d7647cf343a5cdc113524d3e76696b"
+  },
+  "screensaver/pictures/002-kuang-si-waterfall.jpg": {
+    "bytes": 305294,
+    "sha256": "f20b719988eb3b843c9d132125b2ee44bb38c7763c44e6c9649e5ca76fc291b4"
+  },
+  "screensaver/pictures/003-austrian-lake.jpg": {
+    "bytes": 178448,
+    "sha256": "7f3263dc336998a7da495e345e47398ed589fe16e78aa8796afaa1e6c78ad642"
+  },
+  "screensaver/pictures/004-autumn-reflections.jpg": {
+    "bytes": 305992,
+    "sha256": "058815ad8f73b4bda67c9d34bc0f0a40382659ea80ceb35349f6a307ec9f9e63"
+  },
+  "themes/cinematic-projector/wallpaper.jpg": {
+    "bytes": 72980,
+    "sha256": "bac0a76ba155222e630157219320a2dba5f0e5c17152606c04ab11ba6a64a855"
+  },
+  "themes/cinematic-tcl/wallpaper.jpg": {
+    "bytes": 72980,
+    "sha256": "bac0a76ba155222e630157219320a2dba5f0e5c17152606c04ab11ba6a64a855"
+  },
+  "themes/projector-sunrise-fast/wallpaper.jpg": {
+    "bytes": 65848,
+    "sha256": "ad100e71e9df0b2c5fac87b0c7994f2fb513ad684f066036628c55e23d7bc784"
+  },
+  "themes/projector-sunrise-source/001-sunrise.png": {
+    "bytes": 1688578,
+    "sha256": "f24e650f33faed4765a83186a87e68bce8d2e9467bcf84a023e5b405c5f9b5d2"
+  }
+}

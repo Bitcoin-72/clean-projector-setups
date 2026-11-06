@@ -1,0 +1,46 @@
+{
+  "launcher": "com.gathin.tvhome/.MainActivity",
+  "version": "3.2",
+  "package": "com.gathin.tvhome",
+  "keys": {
+    "series": 1,
+    "per_series": 12,
+    "measured": 0,
+    "lost": 12
+  },
+  "response_ms": {
+    "p50": null,
+    "p95": null,
+    "p99": null,
+    "max": null,
+    "n": 0
+  },
+  "movement_ms": {
+    "p50": null,
+    "p95": null,
+    "p99": null,
+    "max": null,
+    "n": 0
+  },
+  "jank_pct": null,
+  "frames": 0,
+  "janky_frames": 0,
+  "cold_start_ms": {
+    "p50": 845,
+    "p95": 851,
+    "p99": 851,
+    "max": 851,
+    "n": 5
+  },
+  "return_to_home_ms": {
+    "p50": null,
+    "p95": null,
+    "p99": null,
+    "max": null,
+    "n": 0
+  },
+  "idle_cpu_pct": 12.3,
+  "idle_launcher_cpu_pct": 0.1,
+  "pss_mb": 43,
+  "provenance": "Selected fields from tools/bench.py; network address and raw device dumps omitted."
+}

@@ -1,0 +1,25 @@
+# Local devices, credentials, recovery records and build products
+.local-state/
+backup/
+checks/
+shots/
+work/
+tools/adbkey/
+adbkey*
+*.pem
+*.key
+*.keystore
+*.jks
+*.apk
+*.aab
+.env
+.env.*
+!.env.example
+**/venv/
+**/.venv/
+**/__pycache__/
+**/.gradle/
+**/build/
+**/local.properties
+.DS_Store
+Thumbs.db

@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/Gathin23/cleanyourtv",
+  "commit": "1937c8048672d4c322e70fe805bda1175f546716",
+  "launcher_version": "3.2",
+  "integration": "git submodule",
+  "source_change": "per-device launcher/app/src/main/res/values/config.xml only"
+}

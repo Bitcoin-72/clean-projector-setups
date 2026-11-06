@@ -1,0 +1,7 @@
+# Portronics Beem 440; Android 11; UI_Veng.projector.20250321.160324.
+# Disables only the audited event uploader and ad-overlay SDK.
+# Backed up before changes. No package is uninstalled.
+# Stock Home, screensavers, projection/HDMI/power, Bluetooth, USB input,
+# casting, streaming apps, app stores and firmware updaters are preserved.
+com.htc.eventuploadservice
+com.htc.expandsdk

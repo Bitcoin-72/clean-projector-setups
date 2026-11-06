@@ -1,0 +1,4 @@
+# Applied after the replacement Photos screensaver was installed and verified.
+# Obsolete advertising/analytics SDK used by the previous screensaver system.
+# Keep the original HTC screensaver itself available for restore.
+com.hotack.screensaversdk

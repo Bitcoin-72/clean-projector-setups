@@ -1,0 +1,24 @@
+name: Validate companion project
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  offline-checks:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: true
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Validate assets, formats, upstream pin, privacy patterns and links
+        run: python tools/validate.py
+      - name: Parse PowerShell and exercise offline profile guards
+        shell: pwsh
+        run: ./scripts/Test-Scripts.ps1
