@@ -30,7 +30,7 @@ The Beem has 1 GB RAM and a native 1280 × 720 display. Its Android model identi
 ## Start here
 
 ```powershell
-git clone --recurse-submodules https://github.com/tirthvohera9/clean-projector-setups.git
+git clone --recurse-submodules https://github.com/Bitcoin-72/clean-projector-setups.git
 cd clean-projector-setups
 ```
 
