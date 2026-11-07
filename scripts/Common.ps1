@@ -25,7 +25,7 @@ function Assert-Tools {
 }
 
 function Get-Profile([string]$Profile) {
-    if ($Profile -notin @('portronics-beem-440', 'tcl-uniontv')) { throw 'Unknown device profile.' }
+    if ($Profile -ne 'portronics-beem-440') { throw 'Unknown device profile.' }
     $folder = Join-Path $script:SetupRoot "profiles\$Profile"
     $deviceFile = Join-Path $folder 'device.json'
     if (-not (Test-Path -LiteralPath $deviceFile)) { throw "Missing profile metadata: $deviceFile" }

@@ -26,11 +26,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\Restore-Cleanup.ps
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\Restore-Preferences.ps1 -Profile portronics-beem-440 -TvHost DEVICE_IP
 ```
 
-Use `-Profile tcl-uniontv` for the TCL. Replace `DEVICE_IP` with your device address. `Restore-Cleanup.ps1` requires the matching upstream recovery record. `Restore-Preferences.ps1` restores the Home, animation and screensaver preferences saved before the first wrapper change; keep `.local-state` available.
+Replace `DEVICE_IP` with your device address. `Restore-Cleanup.ps1` requires the matching upstream recovery record. `Restore-Preferences.ps1` restores the Home, animation and screensaver preferences saved before the first wrapper change; keep `.local-state` available.
 
 Upstream `tools/restore.ps1` takes the original list and can restore recorded package states, Home and animation settings. Restoring one cleanup list does not automatically undo a separately applied list or add-on. If you manually applied the optional old screensaver SDK cleanup, restore its separate record as well.
 
-On the tested Beem, the original Home was `com.htc.htclauncherhighenglishd08/com.htc.activity.HomeActivity`; on the tested TCL it was `com.google.android.tvlauncher/.MainActivity`. These are reference values, not replacements for your own backup.
+On the tested Beem, the original Home was `com.htc.htclauncherhighenglishd08/com.htc.activity.HomeActivity`. This is a reference value, not a replacement for your own backup.
 
 ## Restore only the appearance
 

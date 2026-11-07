@@ -1,9 +1,9 @@
-# Set up a matching TV or projector with a coding agent
+# Set up a matching Android projector with a coding agent
 
 Copy this prompt into your coding agent after cloning the repository with its submodule:
 
 ```text
-Help me apply this repository's matching device profile to my TV or projector.
+Help me apply this repository's matching device profile to my Android projector.
 
 Read README.md, docs/SETUP.md, docs/DEVICES.md and docs/RESTORE.md first. Read the
 pinned upstream AGENTS.md and PROMPT.md before using its device tools. Keep the
@@ -41,4 +41,4 @@ actual debugging ports are closed. A timeout is inconclusive. Leave a concise
 record of what changed and how to restore my own saved state.
 ```
 
-The public profiles are examples tested on particular firmware revisions. Follow your own device's recorded state when restoring.
+The supplied Beem profile is tested on a particular firmware revision. For another Android projector, start with docs/OTHER-PROJECTORS.md and create a separately audited profile. Follow your own device's recorded state when restoring.

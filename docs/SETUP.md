@@ -48,7 +48,7 @@ These checks do not replace testing an installation on your actual hardware. The
 3. Enable the device's USB/Network debugging option and accept the authorisation prompt on the device. If your firmware exposes a separate Wireless debugging option, use upstream's documented connection procedure for it.
 4. Supply your device address to the wrapper; the examples use `DEVICE_IP` as a placeholder.
 5. Save the original packages and disabled list, properties, settings and resolved Home before changing anything. Keep the backup locally.
-6. Confirm the expected streaming apps and package IDs exist. The projector's Netflix and Prime IDs differ from the TCL's.
+6. Confirm the expected streaming apps and package IDs exist. App package IDs can differ across projector firmware revisions.
 
 The public profiles match the original units, not every device carrying the same retail name. Stop on an unexpected firmware or package mismatch and inspect it before proceeding.
 
@@ -61,16 +61,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\Build-and-Install.
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\Apply-Theme.ps1 -Profile portronics-beem-440 -TvHost DEVICE_IP -Look Sunrise -FastAnimations
 ```
 
-For the TCL:
+The installation wrapper supplies the profile's `launcher-config.xml` to the pinned upstream build and preserves the projector’s stock launcher. Build from source; do not install an APK from an unrelated device. Before its first change, the wrapper saves the device's relevant preferences in the ignored `.local-state` folder. Keep that folder for recovery.
 
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\Build-and-Install.ps1 -Profile tcl-uniontv -TvHost DEVICE_IP
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\Apply-Theme.ps1 -Profile tcl-uniontv -TvHost DEVICE_IP -Look Cinematic
-```
-
-The installation wrapper supplies the profile's `launcher-config.xml` to the pinned upstream build and preserves the stock launcher on both devices. Build from source; do not install an APK from an unrelated device. Before its first change, the wrapper saves the device's relevant preferences in the ignored `.local-state` folder. Keep that folder for recovery.
-
-For the Beem, choose `themes/projector-sunrise-fast` for the tested bright interface or `themes/cinematic-projector` for the earlier dark appearance. The TCL uses `themes/cinematic-tcl`.
+For the Beem, choose `themes/projector-sunrise-fast` for the tested bright interface or `themes/cinematic-projector` for the earlier dark appearance.
 
 The bright theme keeps a static wallpaper, uniform tiles, white labels and reduced motion. Optional Android animation scales of 0.5 are a separate system setting; save their existing values before changing them.
 
@@ -84,7 +77,7 @@ Review the device's `debloat.txt`, then apply it separately. For the Beem:
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\Apply-Cleanup.ps1 -Profile portronics-beem-440 -TvHost DEVICE_IP
 ```
 
-Use `-Profile tcl-uniontv` for the TCL. The wrapper uses upstream's disable and recovery tools, disables rather than uninstalls, and records the prior package states. Keep the resulting local backup and recovery records.
+The wrapper uses upstream's disable and recovery tools, disables rather than uninstalls, and records the prior package states. Keep the resulting local backup and recovery records.
 
 The Beem's optional old screensaver SDK list documents a later change made on the original unit. The base cleanup wrapper does not apply that extra list. Use upstream's documented disable/recovery procedure for it only after installing and verifying Photos; keep its separate recovery record.
 

@@ -10,7 +10,7 @@ foreach ($file in Get-ChildItem -LiteralPath $PSScriptRoot -Filter '*.ps1' -File
 }
 if ($errors.Count) { throw ($errors -join "`n") }
 . (Join-Path $PSScriptRoot 'Common.ps1')
-foreach ($name in @('portronics-beem-440', 'tcl-uniontv')) {
+foreach ($name in @('portronics-beem-440')) {
     $info = Get-Profile $name
     [void]([xml](Get-Content -LiteralPath (Join-Path $info.Folder 'launcher-config.xml') -Raw))
     foreach ($line in Get-Content -LiteralPath (Join-Path $info.Folder 'debloat.txt')) {
@@ -18,7 +18,7 @@ foreach ($name in @('portronics-beem-440', 'tcl-uniontv')) {
         if ($package -and $package -notmatch '^[A-Za-z_][A-Za-z0-9_]*(\.[A-Za-z0-9_]+)+$') { throw "Invalid package in $name cleanup list." }
     }
 }
-foreach ($name in @('projector-sunrise-fast', 'cinematic-projector', 'cinematic-tcl')) {
+foreach ($name in @('projector-sunrise-fast', 'cinematic-projector')) {
     $config = Get-Content -LiteralPath (Join-Path $script:SetupRoot "themes\$name\config.json") -Raw | ConvertFrom-Json
     if (@($config.dock_apps).Count -ne 4) { throw "$name must contain four dock apps." }
 }
@@ -35,7 +35,11 @@ function Invoke-Tv([string]$Command) {
 $savedTarget = $env:TV_HOST
 $savedPort = $env:TV_PORT
 try {
-    foreach ($name in @('portronics-beem-440', 'tcl-uniontv')) {
+    $unsupportedRejected = $false
+    try { [void](Get-Profile 'unsupported-device') }
+    catch { $unsupportedRejected = $_.Exception.Message -match 'Unknown device profile' }
+    if (-not $unsupportedRejected) { throw 'An unsupported device profile was accepted.' }
+    foreach ($name in @('portronics-beem-440')) {
         $device = (Get-Profile $name).Device
         $script:MockDevice = @{
             'getprop ro.build.version.release' = [string]$device.android

@@ -1,5 +1,5 @@
 param(
-    [Parameter(Mandatory = $true)][ValidateSet('portronics-beem-440', 'tcl-uniontv')][string]$Profile,
+    [Parameter(Mandatory = $true)][ValidateSet('portronics-beem-440')][string]$Profile,
     [Parameter(Mandatory = $true)][string]$TvHost
 )
 . (Join-Path $PSScriptRoot 'Common.ps1')

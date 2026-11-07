@@ -11,10 +11,6 @@
     "bytes": 321716,
     "sha256": "cd11b8813b0988f7491e61bda5b518b44af6c9990508fba42ff20d71461fcbe8"
   },
-  "assets/screenshots/tcl-cinematic.png": {
-    "bytes": 418319,
-    "sha256": "1147c9f480568ab7c8b3e0505d42296e93c256d16fd1256775c112a0268ef158"
-  },
   "screensaver/pictures/001-lake-mystery.jpg": {
     "bytes": 304916,
     "sha256": "6ef3c322553aefa8451fcabe008565d7e9d7647cf343a5cdc113524d3e76696b"
@@ -32,10 +28,6 @@
     "sha256": "058815ad8f73b4bda67c9d34bc0f0a40382659ea80ceb35349f6a307ec9f9e63"
   },
   "themes/cinematic-projector/wallpaper.jpg": {
-    "bytes": 72980,
-    "sha256": "bac0a76ba155222e630157219320a2dba5f0e5c17152606c04ab11ba6a64a855"
-  },
-  "themes/cinematic-tcl/wallpaper.jpg": {
     "bytes": 72980,
     "sha256": "bac0a76ba155222e630157219320a2dba5f0e5c17152606c04ab11ba6a64a855"
   },

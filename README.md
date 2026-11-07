@@ -1,38 +1,37 @@
-# Clean Screen Setups
+# Clean Projector Setups
 
-Bright projector Home, a quiet TV interface, and reversible cleanup profiles for two tested Android devices.
+A reusable starting point for cleaning up and customizing Android projectors: bright Home themes, landscape screensavers and reversible setup tools.
 
 ![Projector Sunrise on the Beem 440](assets/screenshots/projector-sunrise.png)
 
-This is a companion to [Gathin23/cleanyourtv](https://github.com/Gathin23/cleanyourtv). It packages the device configurations, themes, photographs, setup notes and measured results from a real TCL TV and Portronics projector. The launcher, Android tools and Photos screensaver come from CleanYourTV; their source is pinned in the [`upstream`](upstream) submodule.
+This is a companion to [Gathin23/cleanyourtv](https://github.com/Gathin23/cleanyourtv). It packages configurations, themes, photographs, setup notes and measured results from a real Portronics Beem 440 projector. Other Android projector owners can follow the [adaptation guide](docs/OTHER-PROJECTORS.md); the supplied installation scripts target the tested Beem firmware. The launcher, Android tools and Photos screensaver come from CleanYourTV; their source is pinned in the [`upstream`](upstream) submodule.
 
 ## What is included
 
-| Feature | Portronics Beem 440 | TCL UnionTV |
-|---|---|---|
-| Home appearance | Bright **Projector Sunrise Fast**, plus Cinematic | Cinematic |
-| Dock order | YouTube → Netflix → Prime Video → Hotstar | YouTube → Netflix → Prime Video → Hotstar |
-| Cleanup | Two audited telemetry/ad packages; one optional old screensaver SDK | Eight telemetry, recommendation and retail-demo packages |
-| Screensaver | Four credited landscape photographs | Existing system screensaver retained |
-| Original controls | Native projector settings, Bluetooth, USB input and HDMI retained | TV inputs, HDMI audio, voice, casting and updates retained |
-| Recovery | Fresh local backup and reversible package changes | Fresh local backup and reversible package changes |
+| Feature | Projector setup |
+|---|---|
+| Home appearance | Bright **Projector Sunrise Fast**, plus Cinematic |
+| Dock order | YouTube → Netflix → Prime Video → Hotstar |
+| Cleanup | Two audited telemetry/ad packages; one optional old screensaver SDK |
+| Screensaver | Four credited landscape photographs |
+| Original controls | Native projection settings, Bluetooth, USB input, casting and HDMI retained |
+| Recovery | Fresh private backup and reversible package changes |
 
 No phone remote, accessibility key helper, live wallpaper, root access or firmware modification is part of these profiles.
 
-## Tested hardware
+## Tested projector
 
 | Profile | Android | Tested firmware |
 |---|---|---|
 | [Portronics Beem 440](profiles/portronics-beem-440) | 11 / API 30 | `UI_Veng.projector.20250321.160324` |
-| [TCL UnionTV](profiles/tcl-uniontv) | 9 / API 28 | `V8-R41KT01-LF1V343` |
 
 The Beem has 1 GB RAM and a native 1280 × 720 display. Its Android model identifies as `adt3`; matching that generic name alone is insufficient. Package lists and stock controls can differ between firmware revisions. Read the [device notes](docs/DEVICES.md) before applying a profile.
 
 ## Start here
 
 ```powershell
-git clone --recurse-submodules https://github.com/tirthvohera9/clean-screen-setups.git
-cd clean-screen-setups
+git clone --recurse-submodules https://github.com/tirthvohera9/clean-projector-setups.git
+cd clean-projector-setups
 ```
 
 1. Initialize the source with submodules, or run `git submodule update --init --recursive` if you cloned without them.
@@ -67,11 +66,9 @@ These are small practical measurements, with different navigation preconditionin
 
 The tested projector setup shows a different photograph every 30 seconds, starting after two idle minutes. Any key wakes it. The four photographs are above the projector's native resolution and retain their [authors, source links and licences](screensaver/CREDITS.md). They are landscape photographs selected for this setup, not Apple assets.
 
-## TV appearance
+## Use this with another projector
 
-![Cinematic on TCL UnionTV](assets/screenshots/tcl-cinematic.png)
-
-The TCL profile keeps its television input paths, HDMI home-theatre audio, Google Assistant, casting and updates. Its dock uses the TV-specific Netflix and Prime packages; the projector uses different package IDs. The two compiled configurations are intentionally separate.
+Start with [the adaptation guide](docs/OTHER-PROJECTORS.md) and [copyable coding-agent prompt](PROMPT.md). The existing profile is tested only on the listed Beem firmware; another model needs its own package audit, configuration and recovery record. [Contribute a tested projector profile](CONTRIBUTING.md).
 
 ## Recovery and project scope
 
